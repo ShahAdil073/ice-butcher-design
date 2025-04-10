@@ -1,0 +1,353 @@
+/* Analytics Container Styles */
+.analytics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.analytics-section {
+  margin-bottom: 20px;
+}
+
+/* Section Header Styles */
+.analytics-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.analytics-section .section-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.analytics-section .section-header i {
+  font-size: 14px;
+  color: var(--light-text);
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Time Filter Styles */
+.time-filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+.time-filter-btn {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.time-filter i {
+  font-size: 12px;
+  color: var(--light-text);
+}
+
+/* Analytics Grid Layout */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+.analytics-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 20px;
+  grid-column: span 4;
+}
+
+.analytics-card.wide-card {
+  grid-column: span 12;
+}
+
+.analytics-card.dark-card {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.analytics-card.productivity-card {
+  grid-column: span 6;
+}
+
+/* Card Header Styles */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.dark-card .card-header h3 {
+  color: var(--white);
+}
+
+.card-header i {
+  font-size: 14px;
+  color: var(--light-text);
+  cursor: pointer;
+}
+
+.dark-card .card-header i {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Chart Container Styles */
+.chart-container {
+  display: flex;
+  height: 200px;
+}
+
+.chart-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.line-chart-container, .bar-chart-container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+/* Chart Legend Styles */
+.chart-legend {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 15px;
+}
+
+.chart-legend.horizontal {
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.color-dot.accepted {
+  background-color: #13294B;
+}
+
+.color-dot.assigned {
+  background-color: #92C3F0;
+}
+
+.color-dot.unassigned {
+  background-color: #E0E0E0;
+}
+
+.color-dot.busy {
+  background-color: #13294B;
+}
+
+.color-dot.free {
+  background-color: #92C3F0;
+}
+
+.color-dot.inactive {
+  background-color: #E0E0E0;
+}
+
+.legend-label {
+  font-size: 12px;
+  color: var(--text-color);
+}
+
+.legend-value {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Task Efficiency Card Styles */
+.efficiency-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.efficiency-value {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.efficiency-label {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.efficiency-progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.efficiency-subtext {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 4px;
+}
+
+.efficiency-percent {
+  font-size: 12px;
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+/* Productivity Card Styles */
+.productivity-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.productivity-value {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dark-card .productivity-value {
+  color: var(--white);
+}
+
+.productivity-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.productivity-metric {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.metric-label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.mini-bar-chart, .mini-line-chart {
+  flex: 1;
+  width: 100%;
+  min-height: 80px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .analytics-card {
+    grid-column: span 6;
+  }
+
+  .analytics-card.productivity-card {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 992px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-card,
+  .analytics-card.wide-card,
+  .analytics-card.productivity-card {
+    grid-column: 1 / -1;
+  }
+
+  .chart-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .chart-wrapper {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+  .chart-legend {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .analytics-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .time-filter {
+    align-self: flex-start;
+  }
+
+  .productivity-metrics {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chart-legend.horizontal {
+    flex-wrap: wrap;
+  }
+}

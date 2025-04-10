@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Butcher - Settings</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/settings.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Component -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/img/logo.png" alt="Ice Butcher Logo">
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          <li>
+            <a href="agents.html">
+              <i class="fas fa-users"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tasks.html">
+              <i class="fas fa-tasks"></i>
+            </a>
+          </li>
+          <li>
+            <a href="analytics.html">
+              <i class="fas fa-chart-bar"></i>
+            </a>
+          </li>
+          <li>
+            <a href="dashcam.html">
+              <i class="fas fa-video"></i>
+            </a>
+          </li>
+          <li class="active">
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Component -->
+      <header class="header">
+        <h1>Settings</h1>
+        <div class="header-actions">
+          <button class="refresh-btn">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="user-profile">
+            <img src="assets/img/avatar.png" alt="User avatar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Settings Container -->
+      <div class="settings-container">
+        <!-- Settings Sidebar -->
+        <div class="settings-sidebar">
+          <div class="settings-nav-header">
+            <i class="fas fa-cog"></i>
+            <h2>Settings</h2>
+          </div>
+          <ul class="settings-nav">
+            <li>
+              <a href="#profile">Profile</a>
+            </li>
+            <li>
+              <a href="#notification">Notification</a>
+            </li>
+            <li>
+              <a href="#account-log">Account Log</a>
+            </li>
+            <li class="active">
+              <a href="#access-control">Access Control</a>
+            </li>
+            <li>
+              <a href="#preference">Preference</a>
+            </li>
+            <li class="logout">
+              <a href="#logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Settings Content -->
+        <div class="settings-content">
+          <!-- Access Control Section -->
+          <section id="access-control" class="settings-section active">
+            <div class="section-header">
+              <h2>Agent Access Control List</h2>
+              <p>Add new roles with customized permissions as per your requirement. <a href="#">Learn more</a></p>
+            </div>
+
+            <div class="search-bar">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Search Role">
+            </div>
+
+            <div class="add-role-button">
+              <button class="add-role-btn">
+                <i class="fas fa-plus"></i> Add Role
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table class="roles-table">
+                <thead>
+                  <tr>
+                    <th>Role ID</th>
+                    <th>Role Name</th>
+                    <th>Creation Time</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>437141</td>
+                    <td>Role 1</td>
+                    <td>02 Aug 2023 10:51 PM</td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>465376</td>
+                    <td>Role 2</td>
+                    <td>06 May 2024 07:46 PM</td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="pagination">
+              <button class="prev-page">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="page-numbers">
+                <button class="page-number active">1</button>
+                <button class="page-number">2</button>
+                <button class="page-number">3</button>
+              </div>
+              <button class="next-page">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- Preference Section -->
+          <section id="preference" class="settings-section">
+            <div class="section-header">
+              <h2>Agent Panel Customization</h2>
+              <p>Customize the information shown in individual Agent tile in Map view. <button class="reset-btn">Reset</button></p>
+            </div>
+
+            <div class="customization-section">
+              <div class="customization-preview">
+                <h3>Preview</h3>
+                <div class="agent-preview">
+                  <div class="agent-preview-image">
+                    <img src="assets/img/avatar-1.png" alt="John Doe">
+                  </div>
+                  <div class="agent-preview-details">
+                    <h4>John Doe</h4>
+                    <p>+1 954-559-1711</p>
+                    <p>Prime Sedan</p>
+                  </div>
+                  <div class="agent-preview-tasks">
+                    <span>1</span>
+                    <p>Tasks</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="customization-options">
+                <div class="line-option">
+                  <h4>Line 1</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Fleet Name <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="line-option">
+                  <h4>Line 2</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Phone <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="line-option">
+                  <h4>Line 3</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Tags <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="update-btn-container">
+                  <button class="update-btn">Update</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-header margin-top">
+              <h2>Tracking Panel Customization</h2>
+              <p>Customize the information shown in tracking view. <button class="reset-btn">Reset</button></p>
+            </div>
+
+            <div class="customization-section">
+              <div class="customization-preview">
+                <h3>Preview</h3>
+                <div class="tracking-preview">
+                  <div class="tracking-preview-image">
+                    <img src="assets/img/avatar-1.png" alt="John Doe">
+                  </div>
+                  <div class="tracking-preview-details">
+                    <h4>John Doe</h4>
+                    <p>Pickup</p>
+                    <p>751 Bleecker Roads Apt.078, Lida Robertson</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="customization-options">
+                <div class="line-option">
+                  <h4>Line 1</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Fleet Name <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="line-option">
+                  <h4>Line 2</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Job Type <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="line-option">
+                  <h4>Line 3</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Job Name <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="update-btn-container">
+                  <button class="update-btn">Update</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-header margin-top">
+              <h2>Task Panel Customization</h2>
+              <p>Customize the information shown in individual Task tile in Map view. <button class="reset-btn">Reset</button></p>
+            </div>
+
+            <div class="task-type-tabs">
+              <button class="task-type-tab active">Pickup</button>
+              <button class="task-type-tab">Delivery</button>
+            </div>
+
+            <div class="customization-section">
+              <div class="customization-preview">
+                <h3>Preview</h3>
+                <div class="task-preview">
+                  <div class="task-preview-details">
+                    <h4>Task Id: #552496708</h4>
+                    <span class="task-status-label acknowledged">Acknowledged</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="customization-options">
+                <div class="line-option">
+                  <h4>Line 1</h4>
+                  <div class="dropdown">
+                    <button class="dropdown-btn">Task ID <i class="fas fa-chevron-down"></i></button>
+                  </div>
+                </div>
+
+                <div class="update-btn-container">
+                  <button class="update-btn">Update</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Notification Section -->
+          <section id="notification" class="settings-section">
+            <div class="section-header">
+              <h2>Notifications</h2>
+              <p>Send custom SMS's, emails and webhooks based on each trigger and customize the content. <a href="#">Learn more</a></p>
+            </div>
+
+            <div class="section-subheader">
+              <h3>Pickup Notifications</h3>
+              <button class="add-notification-btn">
+                <i class="fas fa-plus"></i> Add Pickup Notification
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table class="notification-table">
+                <thead>
+                  <tr>
+                    <th>Events</th>
+                    <th>SMS</th>
+                    <th>Email</th>
+                    <th>Webhook</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Request Received</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Request Accepted</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Agent Started</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Agent Arrived</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Successful</td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Failed</td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Cancelled</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Task updated app notification</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Auto Allocation Started</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Auto Allocation Failed</td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch"></div></td>
+                    <td><div class="toggle-switch active"></div></td>
+                    <td>
+                      <button class="action-btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Add Role Modal -->
+  <div class="modal" id="addRoleModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add Role</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="roleName">Role Name*</label>
+          <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="roleName" placeholder="Role Name">
+          </div>
+        </div>
+
+        <div class="collapsible-section">
+          <div class="collapsible-header active">
+            <i class="fas fa-chevron-down"></i>
+            <h3>Task Permissions</h3>
+          </div>
+          <div class="collapsible-content">
+            <div class="permissions-table">
+              <div class="permissions-header">
+                <span>Permissions</span>
+                <span>Status</span>
+              </div>
+              <div class="permission-row">
+                <span>Create Task</span>
+                <div class="toggle-switch"></div>
+              </div>
+              <div class="permission-row">
+                <span>Create Unassigned Task</span>
+                <div class="toggle-switch"></div>
+              </div>
+              <div class="permission-row">
+                <span>Update Task</span>
+                <div class="toggle-switch"></div>
+              </div>
+              <div class="permission-row">
+                <span>Change Task Status</span>
+                <div class="toggle-switch"></div>
+              </div>
+              <div class="permission-row">
+                <span>Update Custom Field</span>
+                <div class="toggle-switch"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapsible-section">
+          <div class="collapsible-header">
+            <i class="fas fa-chevron-right"></i>
+            <h3>Profile Permissions</h3>
+          </div>
+          <div class="collapsible-content" style="display: none;">
+            <!-- Profile permissions content would go here -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn">Cancel</button>
+        <button class="add-btn">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Butcher - Analytics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/analytics.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Component -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/img/logo.png" alt="Ice Butcher Logo">
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          <li>
+            <a href="agents.html">
+              <i class="fas fa-users"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tasks.html">
+              <i class="fas fa-tasks"></i>
+            </a>
+          </li>
+          <li class="active">
+            <a href="analytics.html">
+              <i class="fas fa-chart-bar"></i>
+            </a>
+          </li>
+          <li>
+            <a href="dashcam.html">
+              <i class="fas fa-video"></i>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Component -->
+      <header class="header">
+        <h1>Analytics</h1>
+        <div class="header-actions">
+          <button class="refresh-btn">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="user-profile">
+            <img src="assets/img/avatar.png" alt="User avatar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Analytics Container -->
+      <div class="analytics-container">
+        <!-- Real Time Section -->
+        <section class="analytics-section">
+          <div class="section-header">
+            <h2>Real Time</h2>
+            <div class="time-filter">
+              <button class="time-filter-btn active">Daily</button>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <div class="analytics-grid">
+            <!-- Tasks Status Chart -->
+            <div class="analytics-card">
+              <div class="card-header">
+                <h3>Tasks Status <i class="fas fa-chevron-down"></i></h3>
+              </div>
+              <div class="chart-container">
+                <div class="chart-wrapper">
+                  <canvas id="tasksStatusChart"></canvas>
+                </div>
+                <div class="chart-legend">
+                  <div class="legend-item">
+                    <span class="color-dot accepted"></span>
+                    <span class="legend-label">Accepted</span>
+                    <span class="legend-value">7</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="color-dot assigned"></span>
+                    <span class="legend-label">Assigned</span>
+                    <span class="legend-value">4</span>
+                  </div>
+                  <div class="legend-item">
+                    <span class="color-dot unassigned"></span>
+                    <span class="legend-label">Unassigned</span>
+                    <span class="legend-value">3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Task Efficiency Card -->
+            <div class="analytics-card dark-card">
+              <div class="card-header">
+                <h3>Task Efficiency <i class="fas fa-chevron-down"></i></h3>
+              </div>
+              <div class="efficiency-content">
+                <div class="efficiency-value">7</div>
+                <div class="efficiency-label">Active Projects</div>
+                <div class="efficiency-progress">
+                  <div class="efficiency-subtext">3 Pending</div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 72%"></div>
+                  </div>
+                  <div class="efficiency-percent">72%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Total Tasks Chart -->
+            <div class="analytics-card wide-card">
+              <div class="card-header">
+                <h3>Total Tasks <i class="fas fa-chevron-down"></i></h3>
+              </div>
+              <div class="line-chart-container">
+                <canvas id="totalTasksChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Agent Status Section -->
+        <section class="analytics-section">
+          <div class="section-header">
+            <h2>Agent Status <i class="fas fa-chevron-down"></i></h2>
+          </div>
+
+          <div class="analytics-grid">
+            <!-- Agent Status Bar Chart -->
+            <div class="analytics-card wide-card">
+              <div class="bar-chart-container">
+                <canvas id="agentStatusChart"></canvas>
+              </div>
+              <div class="chart-legend horizontal">
+                <div class="legend-item">
+                  <span class="color-dot busy"></span>
+                  <span class="legend-label">Busy</span>
+                </div>
+                <div class="legend-item">
+                  <span class="color-dot free"></span>
+                  <span class="legend-label">Free</span>
+                </div>
+                <div class="legend-item">
+                  <span class="color-dot inactive"></span>
+                  <span class="legend-label">Inactive</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Distance Based Productivity -->
+            <div class="analytics-card dark-card productivity-card">
+              <div class="card-header">
+                <h3>Distance Based Productivity <i class="fas fa-chevron-down"></i></h3>
+              </div>
+              <div class="productivity-content">
+                <div class="productivity-value">65.76%</div>
+                <div class="productivity-metrics">
+                  <div class="productivity-metric">
+                    <div class="metric-value">51.98%</div>
+                    <div class="metric-label">7 Days Ago</div>
+                  </div>
+                  <div class="productivity-metric">
+                    <div class="metric-value">98.76%</div>
+                    <div class="metric-label">30 days ago</div>
+                  </div>
+                </div>
+                <div class="mini-bar-chart">
+                  <canvas id="distanceProductivityChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Time Based Productivity -->
+            <div class="analytics-card productivity-card">
+              <div class="card-header">
+                <h3>Time Based Productivity <i class="fas fa-chevron-down"></i></h3>
+              </div>
+              <div class="productivity-content">
+                <div class="productivity-value">51.98%</div>
+                <div class="mini-line-chart">
+                  <canvas id="timeProductivityChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/analytics.js"></script>
+</body>
+</html>

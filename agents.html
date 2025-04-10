@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Butcher - Agents</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/agents.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Component -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/img/logo.png" alt="Ice Butcher Logo">
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          <li class="active">
+            <a href="agents.html">
+              <i class="fas fa-users"></i>
+            </a>
+          </li>
+          <li>
+            <a href="tasks.html">
+              <i class="fas fa-tasks"></i>
+            </a>
+          </li>
+          <li>
+            <a href="analytics.html">
+              <i class="fas fa-chart-bar"></i>
+            </a>
+          </li>
+          <li>
+            <a href="dashcam.html">
+              <i class="fas fa-video"></i>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Component -->
+      <header class="header">
+        <h1>Agent</h1>
+        <div class="header-actions">
+          <div class="filter-section">
+            <div class="filter-dropdown">
+              <button class="filter-btn">
+                <i class="fas fa-users"></i>
+                All Teams
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="filter-dropdown">
+              <button class="filter-btn">
+                <i class="fas fa-tag"></i>
+                Type
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="filter-dropdown">
+              <button class="filter-btn">
+                <i class="fas fa-circle"></i>
+                All Status
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+          <button class="add-agent-btn">
+            <i class="fas fa-plus"></i>
+            Add Agent
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <button class="refresh-btn">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="user-profile">
+            <img src="assets/img/avatar.png" alt="User avatar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Agents Table Section -->
+      <section class="agents-section">
+        <div class="search-options">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search...">
+          </div>
+          <div class="search-options-right">
+            <div class="filter-dropdown">
+              <button class="filter-btn">
+                Fleet Id
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <div class="filter-dropdown">
+              <button class="filter-btn">
+                Exact Search
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table class="agents-table">
+            <thead>
+              <tr>
+                <th><input type="checkbox" class="select-all"></th>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Username</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Device Type</th>
+                <th>Version</th>
+                <th>Team</th>
+                <th>STATUS</th>
+                <th>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13639</td>
+                <td><div class="agent-avatar accent-e">E</div></td>
+                <td>Emma Bold</td>
+                <td>Emma Bold</td>
+                <td>christianmhiggins26@gmail.com</td>
+                <td>+1 6175155065</td>
+                <td>iOS</td>
+                <td>4.8.4</td>
+                <td>Default</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13640</td>
+                <td><div class="agent-avatar accent-l">L</div></td>
+                <td>Lucy Kunic</td>
+                <td>Lucy Kunic</td>
+                <td>alvaro@theicbutcher.com</td>
+                <td>+1 561-701-3029</td>
+                <td>Android</td>
+                <td>4.6.9</td>
+                <td>Default</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13641</td>
+                <td><div class="agent-avatar"><img src="assets/img/avatar-1.png" alt="Emma Smith"></div></td>
+                <td>Emma Smith</td>
+                <td>Emma Smith</td>
+                <td>lmaristanya@gmail.com</td>
+                <td>+1 754-802-9952</td>
+                <td>iOS</td>
+                <td>4.8.5</td>
+                <td>Default</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13642</td>
+                <td><div class="agent-avatar accent-n">N</div></td>
+                <td>Neil Owen</td>
+                <td>Neil Owen</td>
+                <td>berman.lukas@gmail.com</td>
+                <td>+1 9546217719</td>
+                <td>iOS</td>
+                <td>4.7.5</td>
+                <td>Default</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13643</td>
+                <td><div class="agent-avatar"><img src="assets/img/avatar-2.png" alt="Ana Crown"></div></td>
+                <td>Ana Crown</td>
+                <td>Ana Crown</td>
+                <td>2narogers@gmail.com</td>
+                <td>+1 813-598-9455</td>
+                <td>iOS</td>
+                <td>4.9.1</td>
+                <td>Default</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13644</td>
+                <td><div class="agent-avatar accent-c">C</div></td>
+                <td>Roger@theicebutcher.com</td>
+                <td>Mikaela Collins</td>
+                <td>roger@theicbutcher.com</td>
+                <td>+1 954-554-7994</td>
+                <td>iOS</td>
+                <td>4.8.9</td>
+                <td>Default</td>
+                <td><span class="status-badge in-transit">In Transit</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13645</td>
+                <td><div class="agent-avatar accent-m">M</div></td>
+                <td>Melody Macy</td>
+                <td>Melody Macy</td>
+                <td>www.hugo mejia@gmail.com</td>
+                <td>+1 954-559-1711</td>
+                <td>iOS</td>
+                <td>4.9.4</td>
+                <td>Default</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13646</td>
+                <td><div class="agent-avatar"><img src="assets/img/avatar-1.png" alt="Emma Smith"></div></td>
+                <td>Emma Smith</td>
+                <td>Emma Smith</td>
+                <td>josephdrayer son5@gmail.com</td>
+                <td>+1 954-552-9912</td>
+                <td>Android</td>
+                <td>4.9.4</td>
+                <td>Default</td>
+                <td><span class="status-badge idle">Idle</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13647</td>
+                <td><div class="agent-avatar"><img src="assets/img/avatar-3.png" alt="Ethan Wilder"></div></td>
+                <td>Ethan Wilder</td>
+                <td>Ethan Wilder</td>
+                <td>jamjat 2nd@gmail.com</td>
+                <td>+16462393455</td>
+                <td>Android</td>
+                <td>4.8.4</td>
+                <td>Default</td>
+                <td><span class="status-badge idle">Idle</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13648</td>
+                <td><div class="agent-avatar accent-l">L</div></td>
+                <td>Lucy Kunic</td>
+                <td>Lucy Kunic</td>
+                <td>0dthomas15 21@gmail.com</td>
+                <td>+1 954-515-6324</td>
+                <td>Android</td>
+                <td>4.9.4</td>
+                <td>Default</td>
+                <td><span class="status-badge idle">Idle</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button class="prev-page">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="page-numbers">
+            <button class="page-number">1</button>
+            <button class="page-number">2</button>
+            <button class="page-number active">3</button>
+            <button class="page-number">4</button>
+            <button class="page-number">5</button>
+          </div>
+          <button class="next-page">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add Agent Modal -->
+  <div class="modal" id="addAgentModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Add Agent</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="tabs">
+          <button class="tab-btn active">General</button>
+        </div>
+
+        <div class="form-section">
+          <h3>Upload Photo</h3>
+          <div class="photo-upload">
+            <div class="avatar-preview">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="agentName">Name</label>
+          <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="agentName" placeholder="Full Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <div class="input-with-flag">
+            <div class="flag-dropdown">
+              <img src="assets/img/flag-us.png" alt="US Flag">
+              <span>+1</span>
+            </div>
+            <input type="tel" id="phoneNumber" placeholder="(XXX) XXX-XXXX">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="example@email.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address*</label>
+          <div class="input-container map-input">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" id="address" placeholder="Enter Address">
+            <div class="map-icons">
+              <button class="location-btn"><i class="fas fa-crosshairs"></i></button>
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input type="text" id="username" placeholder="Username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-container">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="************">
+              <button class="password-toggle"><i class="fas fa-eye"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="team">Team</label>
+            <div class="dropdown">
+              <button class="dropdown-btn">Select team <i class="fas fa-chevron-down"></i></button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <div class="dropdown">
+              <button class="dropdown-btn">Assign Role <i class="fas fa-chevron-down"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tags">Tags</label>
+          <div class="tags-input">
+            <div class="tag">
+              Drink Ice <i class="fas fa-times"></i>
+            </div>
+            <input type="text" placeholder="Add tags...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="type">Type</label>
+          <div class="dropdown">
+            <button class="dropdown-btn">Captive <i class="fas fa-chevron-down"></i></button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="geofence">Geofence</label>
+          <div class="geofence-container">
+            <div id="geofenceMap" class="geofence-map"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="cancel-btn">Cancel</button>
+        <button class="add-btn">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/agents.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciAtiLSRzdW86-lodBwOqktdARFY3sJw&callback=initGeofenceMap" async defer></script>
+</body>
+</html>
