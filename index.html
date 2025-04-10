@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ice Butcher - Dashboard</title>
+  <title>Ice Butcher - Tasks</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/tasks.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <body>
   <div class="app-container">
     <!-- Sidebar Component -->
@@ -23,23 +24,23 @@
             </a>
           </li>
           <li>
-            <a href="profile.html">
+            <a href="agents.html">
               <i class="fas fa-user"></i>
             </a>
           </li>
           <li>
-            <a href="agents.html">
+            <a href="customers.html">
               <i class="fas fa-users"></i>
             </a>
           </li>
           <li>
-            <a href="tasks.html">
-              <i class="fas fa-tasks"></i>
+            <a href="routes.html">
+              <i class="fas fa-route"></i>
             </a>
           </li>
           <li>
             <a href="analytics.html">
-              <i class="fas fa-chart-bar"></i>
+              <i class="fas fa-chart-simple"></i>
             </a>
           </li>
           <li>
@@ -62,6 +63,11 @@
       <header class="header">
         <h1>Dashboard</h1>
         <div class="header-actions">
+          <button class="create-task-btn">
+            <i class="fas fa-plus"></i>
+            Create Task
+            <i class="fas fa-chevron-down"></i>
+          </button>
           <button class="refresh-btn">
             <i class="fas fa-sync-alt"></i>
           </button>
@@ -71,192 +77,268 @@
         </div>
       </header>
 
-      <!-- Day Filter -->
-      <div class="day-filter">
-        <button class="active">Monday</button>
-        <button>Tuesday</button>
-        <button>Wednesday</button>
-        <button>Thursday</button>
-        <button>Friday</button>
-        <button>Saturday</button>
-        <button>Sunday</button>
-      </div>
-
-      <!-- Map Section -->
-      <section class="map-section">
-        <div class="section-header">
-          <h2>Map Overview</h2>
-        </div>
-        <div class="map-container" id="map">
-          <!-- Google Maps will be loaded here -->
-        </div>
-        <div class="task-list">
-          <h2>Task Details</h2>
-          <ul>
-            <li class="task-item">
-              <div class="task-status blue"></div>
-              <div class="task-content">
-                <h3>Task 1</h3>
-                <p>Miami</p>
-                <p class="address">123 Main St</p>
-              </div>
-            </li>
-            <li class="task-item">
-              <div class="task-status orange"></div>
-              <div class="task-content">
-                <h3>Task 2</h3>
-                <p>Pompano Beach</p>
-                <p class="address">123 Main St</p>
-              </div>
-            </li>
-            <li class="task-item">
-              <div class="task-status blue"></div>
-              <div class="task-content">
-                <h3>Task 3</h3>
-                <p>Miami</p>
-                <p class="address">123 Main St</p>
-              </div>
-            </li>
-            <li class="task-item">
-              <div class="task-status orange"></div>
-              <div class="task-content">
-                <h3>Task 4</h3>
-                <p>Fort Lauderdale</p>
-                <p class="address">123 Main St</p>
-              </div>
-            </li>
-            <li class="task-item">
-              <div class="task-status blue"></div>
-              <div class="task-content">
-                <h3>Task 5</h3>
-                <p>Miami</p>
-                <p class="address">123 Main St</p>
-              </div>
-            </li>
-            <li class="task-item">
-              <div class="task-status orange"></div>
-              <div class="task-content">
-                <h3>Task 6</h3>
-                <p>Pompano Beach</p>
-                <p class="address">123 Main St</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Driver Section -->
-      <section class="driver-section">
-        <div class="section-header">
-          <h2>Driver</h2>
-          <button class="replace-driver-btn">
-            <i class="fas fa-sync-alt"></i> Replace Driver
+      <!-- Dashboard Controls -->
+      <div class="dashboard-controls">
+        <div class="view-options">
+          <button class="view-option active">
+            <i class="fas fa-map-marked-alt"></i> Map View
+          </button>
+          <button class="view-option">
+            <i class="fas fa-list"></i> List View
           </button>
         </div>
-        <div class="driver-cards">
-          <div class="driver-card">
-            <div class="driver-info">
-              <img src="assets/img/avatar-1.png" alt="Sebastian Nelson">
-              <div class="driver-details">
-                <h3>Sebastian Nelson</h3>
-                <p>+1 954-559-1711</p>
-                <p>Prime Sedan</p>
+
+        <div class="date-filter">
+          <button class="date-filter-btn">
+            <i class="far fa-calendar-alt"></i>
+            Today, 10:00 AM - 08:00 PM
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="team-filter">
+          <button class="team-filter-btn">
+            All Teams
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <div class="agent-filter">
+          <button class="agent-filter-btn">
+            All Agents
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tasks View -->
+      <div class="map-tasks-container">
+        <div class="map-container" id="map">
+          <!-- Map goes here -->
+        </div>
+
+        <div class="tasks-panel">
+          <div class="tasks-header">
+            <h2>Tasks <i class="fas fa-chevron-down"></i></h2>
+            <div class="tasks-stats">
+              <div class="task-stat">
+                <span class="stat-count">0</span>
+                <span class="stat-label">Unassigned</span>
               </div>
-              <div class="driver-tasks">
-                <span>3</span>
-                <p>Tasks</p>
+              <div class="task-stat">
+                <span class="stat-count">4</span>
+                <span class="stat-label">Assigned</span>
               </div>
-              <div class="driver-actions">
-                <button class="call-btn"><i class="fas fa-phone"></i></button>
-                <button class="track-btn"><i class="fas fa-location-arrow"></i></button>
-              </div>
-            </div>
-            <div class="driver-tasks-list">
-              <div class="task-item">
-                <div class="task-header">
-                  <h3>Task 1</h3>
-                  <span class="assigned-badge">Assigned</span>
-                </div>
-                <div class="task-details">
-                  <p>Miami</p>
-                  <p class="address">123 Main St</p>
-                </div>
-              </div>
-              <div class="task-item">
-                <div class="task-header">
-                  <h3>Task 3</h3>
-                  <span class="assigned-badge">Assigned</span>
-                </div>
-                <div class="task-details">
-                  <p>Miami</p>
-                  <p class="address">123 Main St</p>
-                </div>
-              </div>
-              <div class="task-item">
-                <div class="task-header">
-                  <h3>Task 5</h3>
-                  <span class="assigned-badge">Assigned</span>
-                </div>
-                <div class="task-details">
-                  <p>Miami</p>
-                  <p class="address">123 Main St</p>
-                </div>
+              <div class="task-stat">
+                <span class="stat-count">0</span>
+                <span class="stat-label">Completed</span>
               </div>
             </div>
           </div>
 
-          <div class="driver-card">
-            <div class="driver-info">
-              <img src="assets/img/avatar-2.png" alt="Angel Ponces">
-              <div class="driver-details">
-                <h3>Angel Ponces</h3>
-                <p>+1 305-654-1334</p>
-                <p>Prime Sedan</p>
+          <div class="tasks-list">
+            <div class="task-card">
+              <div class="task-header">
+                <div class="task-id">Task Id: #552496708</div>
+                <div class="task-priority high"><i class="fas fa-circle"></i> High Priority</div>
+                <div class="task-status assigned">Assigned</div>
               </div>
-              <div class="driver-tasks">
-                <span>3</span>
-                <p>Tasks</p>
-              </div>
-              <div class="driver-actions">
-                <button class="call-btn"><i class="fas fa-phone"></i></button>
-                <button class="track-btn"><i class="fas fa-location-arrow"></i></button>
+
+              <div class="task-details">
+                <div class="task-location">
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">06.05.2025</div>
+                      <div class="time">08:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
+
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">12.05.2025</div>
+                      <div class="time">12:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="task-agent">
+                  <img src="assets/img/avatar-1.png" alt="Sebastian Nelson">
+                  <div class="agent-info">
+                    <div class="agent-name">Sebastian Nelson</div>
+                    <div class="agent-role">Agent</div>
+                  </div>
+                  <div class="agent-actions">
+                    <button class="agent-action-btn">
+                      <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="agent-action-btn">
+                      <i class="fas fa-location-arrow"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="driver-tasks-list">
-              <div class="task-item">
-                <div class="task-header">
-                  <h3>Task 2</h3>
-                  <span class="assigned-badge">Assigned</span>
+
+            <div class="task-card">
+              <div class="task-header">
+                <div class="task-id">Task Id: #552496708</div>
+                <div class="task-priority low"><i class="fas fa-circle"></i> Low Priority</div>
+                <div class="task-status acknowledged">Acknowledged</div>
+              </div>
+
+              <div class="task-details">
+                <div class="task-location">
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">06.05.2025</div>
+                      <div class="time">08:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
+
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">12.05.2025</div>
+                      <div class="time">12:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="task-details">
-                  <p>Pompano Beach</p>
-                  <p class="address">123 Main St</p>
+
+                <div class="task-agent">
+                  <img src="assets/img/avatar-1.png" alt="Angel Ponces">
+                  <div class="agent-info">
+                    <div class="agent-name">Angel Ponces</div>
+                    <div class="agent-role">Agent</div>
+                  </div>
+                  <div class="agent-actions">
+                    <button class="agent-action-btn">
+                      <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="agent-action-btn">
+                      <i class="fas fa-location-arrow"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="task-item">
-                <div class="task-header">
-                  <h3>Task 4</h3>
-                  <span class="assigned-badge">Assigned</span>
+            </div>
+
+            <div class="task-card">
+              <div class="task-header">
+                <div class="task-id">Task Id: #552496708</div>
+                <div class="task-priority low"><i class="fas fa-circle"></i> Low Priority</div>
+                <div class="task-status acknowledged">Acknowledged</div>
+              </div>
+
+              <div class="task-details">
+                <div class="task-location">
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">06.05.2025</div>
+                      <div class="time">08:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
+
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">12.05.2025</div>
+                      <div class="time">12:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="task-details">
-                  <p>Fort Lauderdale</p>
-                  <p class="address">123 Main St</p>
+
+                <div class="task-agent">
+                  <img src="assets/img/avatar-2.png" alt="Angel Ponces">
+                  <div class="agent-info">
+                    <div class="agent-name">Angel Ponces</div>
+                    <div class="agent-role">Agent</div>
+                  </div>
+                  <div class="agent-actions">
+                    <button class="agent-action-btn">
+                      <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="agent-action-btn">
+                      <i class="fas fa-location-arrow"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="task-item">
-                <div class="task-header">
-                  <h3>Task 6</h3>
-                  <span class="assigned-badge">Assigned</span>
+            </div>
+
+            <div class="task-card">
+              <div class="task-header">
+                <div class="task-id">Task Id: #552496708</div>
+                <div class="task-priority high"><i class="fas fa-circle"></i> High Priority</div>
+                <div class="task-status acknowledged">Acknowledged</div>
+              </div>
+
+              <div class="task-details">
+                <div class="task-location">
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">06.05.2025</div>
+                      <div class="time">08:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
+
+                  <div class="location-item">
+                    <div class="location-date">
+                      <div class="date">12.05.2025</div>
+                      <div class="time">12:00 AM</div>
+                    </div>
+                    <div class="location-address">
+                      Anytown, NY 12345
+                      <div class="location-street">123 Main St</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="task-details">
-                  <p>Pompano Beach</p>
-                  <p class="address">123 Main St</p>
+
+                <div class="task-agent">
+                  <img src="assets/img/avatar-1.png" alt="Sebastian Nelson">
+                  <div class="agent-info">
+                    <div class="agent-name">Sebastian Nelson</div>
+                    <div class="agent-role">Agent</div>
+                  </div>
+                  <div class="agent-actions">
+                    <button class="agent-action-btn">
+                      <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="agent-action-btn">
+                      <i class="fas fa-location-arrow"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   </div>
 
@@ -342,7 +424,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tasks.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciAtiLSRzdW86-lodBwOqktdARFY3sJw&callback=initMap" async defer></script>
 </body>
 </html>

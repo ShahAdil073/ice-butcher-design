@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Butcher - Add Customer</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/add-customer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="modal-overlay show">
+    <div class="customer-modal">
+      <div class="modal-header">
+        <h2>Add Customer</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="tabs">
+          <button class="tab-btn active">General</button>
+        </div>
+
+        <div class="form-section">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <div class="input-container">
+              <i class="fas fa-user"></i>
+              <input type="text" id="name" value="Lois Becket" placeholder="Full Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <div class="input-with-flag">
+              <div class="flag-dropdown">
+                <img src="assets/img/flag-us.png" alt="US Flag">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <input type="tel" id="phoneNumber" value="(454) 726-0592" placeholder="(XXX) XXX-XXXX">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-container">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" value="LoisBecket@gmail.com" placeholder="example@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address*</label>
+            <div class="input-container map-input">
+              <i class="fas fa-map-marker-alt"></i>
+              <input type="text" id="address" placeholder="Enter Address">
+              <div class="map-icons">
+                <button class="location-btn"><i class="fas fa-crosshairs"></i></button>
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="globe-btn"><i class="fas fa-globe"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <div class="input-container">
+              <i class="fas fa-align-left"></i>
+              <input type="text" id="description" placeholder="Description....">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tags">Tags</label>
+            <div class="tags-input">
+              <div class="tag">
+                Drink Ice <i class="fas fa-times"></i>
+              </div>
+              <input type="text" placeholder="Add tags...">
+            </div>
+          </div>
+        </div>
+
+        <div class="map-preview">
+          <div id="customerMap" class="customer-map"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="cancel-btn">Cancel</button>
+        <button class="add-btn">Add</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/add-customer.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciAtiLSRzdW86-lodBwOqktdARFY3sJw&callback=initCustomerMap" async defer></script>
+</body>
+</html>

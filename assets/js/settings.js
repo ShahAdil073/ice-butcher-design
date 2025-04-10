@@ -239,3 +239,23 @@ if (prevPageBtn && nextPageBtn && pageNumbers.length > 0) {
     });
   });
 }
+
+  // Accordion functionality
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const accordion = this.parentElement;
+      const content = accordion.querySelector('.accordion-content');
+      const icon = this.querySelector('.accordion-icon i');
+
+      // Toggle content visibility
+      if (content.style.display === 'none') {
+        content.style.display = 'block';
+        icon.className = 'fas fa-chevron-down';
+      } else {
+        content.style.display = 'none';
+        icon.className = 'fas fa-chevron-right';
+      }
+    });
+  }); 

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Butcher - Dashcam</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/dashcam.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Component -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/img/logo.png" alt="Ice Butcher Logo">
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+          <li>
+            <a href="agents.html">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          <li>
+            <a href="customers.html">
+              <i class="fas fa-users"></i>
+            </a>
+          </li>
+          <li>
+            <a href="routes.html">
+              <i class="fas fa-route"></i>
+            </a>
+          </li>
+          <li>
+            <a href="analytics.html">
+              <i class="fas fa-chart-simple"></i>
+            </a>
+          </li>
+          <li class="active">
+            <a href="dashcam.html">
+              <i class="fas fa-video"></i>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Component -->
+      <header class="header">
+        <h1>Dashcam</h1>
+        <div class="header-actions">
+          <button class="create-task-btn">
+            <i class="fas fa-plus"></i>
+            Create Task
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <button class="refresh-btn">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="user-profile">
+            <img src="assets/img/avatar.png" alt="User avatar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Back Button -->
+      <div class="back-button">
+        <button class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+      </div>
+
+      <!-- Task Info -->
+      <div class="task-info">
+        <div class="task-header">
+          <h3>Task Id: #552496708</h3>
+          <span class="status-badge assigned">Assigned</span>
+        </div>
+
+        <div class="task-dates">
+          <div class="task-date active">
+            <div class="date-icon">
+              <i class="fas fa-circle"></i>
+            </div>
+            <div class="date-info">
+              <div class="date">06.05.2025</div>
+              <div class="time">08:00 AM</div>
+            </div>
+            <div class="address">
+              Anytown, NY 12345
+              <div class="address-detail">123 Main St</div>
+            </div>
+          </div>
+
+          <div class="task-date">
+            <div class="date-icon">
+              <i class="far fa-circle"></i>
+            </div>
+            <div class="date-info">
+              <div class="date">12.05.2025</div>
+              <div class="time">12:00 AM</div>
+            </div>
+            <div class="address">
+              Anytown, NY 12345
+              <div class="address-detail">123 Main St</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="agent-info">
+          <img src="assets/img/avatar-1.png" alt="Sebastian Nelson">
+          <div class="agent-details">
+            <div class="agent-name">Sebastian Nelson</div>
+            <div class="agent-role">Agent</div>
+          </div>
+          <div class="agent-actions">
+            <button class="action-icon-btn">
+              <i class="fas fa-phone"></i>
+            </button>
+            <button class="action-icon-btn">
+              <i class="fas fa-location-arrow"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Tabs -->
+      <div class="task-tabs">
+        <button class="tab-btn active">Details</button>
+        <button class="tab-btn">Customer</button>
+        <button class="tab-btn">History</button>
+      </div>
+
+      <!-- Task Details -->
+      <div class="task-details">
+        <div class="detail-item">
+          <div class="detail-label">Status</div>
+          <div class="status-pill assigned">Assigned</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Task Description</div>
+          <div class="detail-value">
+            Lorem ipsum dolor sit amet consectetur. Faucibus purus sollicitudin adipiscing ornare a quis facilisis.
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Start Before</div>
+          <div class="detail-value">-</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Complete Before</div>
+          <div class="detail-value">25 FEB 2025 12:00 PM</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">ETA</div>
+          <div class="detail-value">1 hr 36 mins</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Tracking Link (Unseen)</div>
+          <div class="detail-value tracking-link">Click here to track</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Team</div>
+          <div class="detail-value">Default Team</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Agent</div>
+          <div class="detail-value">Sebastian Nelson</div>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-label">Order ID</div>
+          <div class="detail-value">1175</div>
+        </div>
+      </div>
+
+      <!-- Path History Button -->
+      <div class="path-history-button">
+        <button class="path-history-btn">Show Path History</button>
+      </div>
+
+      <!-- Map Overview -->
+      <section class="map-overview">
+        <h2>Map Overview</h2>
+        <div class="map-container" id="map">
+          <!-- Map will be loaded here -->
+        </div>
+      </section>
+
+      <!-- Smart Alert -->
+      <section class="smart-alert">
+        <h2>Smart Alert</h2>
+        <div class="alerts-container">
+          <div class="alert-item">
+            <div class="alert-icon harsh-braking">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Harsh Braking</div>
+              <div class="alert-time">12:00 PM</div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-icon speeding">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Speeding</div>
+              <div class="alert-time">02:00 PM</div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-icon accident">
+              <i class="fas fa-car-crash"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Accident</div>
+              <div class="alert-time">07:00 PM</div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-icon harsh-braking">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Harsh Braking</div>
+              <div class="alert-time">12:00 PM</div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-icon speeding">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Speeding</div>
+              <div class="alert-time">02:00 PM</div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-icon accident">
+              <i class="fas fa-car-crash"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Accident</div>
+              <div class="alert-time">07:00 PM</div>
+            </div>
+          </div>
+          <div class="alert-item">
+            <div class="alert-icon speeding">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <div class="alert-info">
+              <div class="alert-type">Speeding</div>
+              <div class="alert-time">02:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Footage -->
+      <section class="live-footage">
+        <h2>Live Footage</h2>
+        <div class="footage-container">
+          <img src="assets/img/dashcam-traffic.jpg" alt="Dashcam footage of traffic">
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/dashcam.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciAtiLSRzdW86-lodBwOqktdARFY3sJw&callback=initMap" async defer></script>
+</body>
+</html>

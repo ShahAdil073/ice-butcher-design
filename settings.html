@@ -24,23 +24,23 @@
             </a>
           </li>
           <li>
-            <a href="profile.html">
+            <a href="agents.html">
               <i class="fas fa-user"></i>
             </a>
           </li>
           <li>
-            <a href="agents.html">
+            <a href="customers.html">
               <i class="fas fa-users"></i>
             </a>
           </li>
           <li>
-            <a href="tasks.html">
-              <i class="fas fa-tasks"></i>
+            <a href="routes.html">
+              <i class="fas fa-route"></i>
             </a>
           </li>
           <li>
             <a href="analytics.html">
-              <i class="fas fa-chart-bar"></i>
+              <i class="fas fa-chart-simple"></i>
             </a>
           </li>
           <li>
@@ -81,7 +81,7 @@
             <h2>Settings</h2>
           </div>
           <ul class="settings-nav">
-            <li>
+            <li class="active">
               <a href="#profile">Profile</a>
             </li>
             <li>
@@ -90,7 +90,7 @@
             <li>
               <a href="#account-log">Account Log</a>
             </li>
-            <li class="active">
+            <li>
               <a href="#access-control">Access Control</a>
             </li>
             <li>
@@ -104,8 +104,152 @@
 
         <!-- Settings Content -->
         <div class="settings-content">
+          <!-- Profile Section -->
+          <section id="profile" class="settings-section active">
+            <!-- Profile Accordion -->
+            <div class="profile-accordion">
+              <div class="accordion-header">
+                <div class="accordion-icon">
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <h3>Profile</h3>
+              </div>
+
+              <div class="accordion-content">
+                <div class="profile-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <div class="input-container">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="firstName" value="Lois" placeholder="First Name">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <div class="input-container">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="lastName" value="Becket" placeholder="Last Name">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="phoneNumber">Phone Number</label>
+                      <div class="input-with-flag">
+                        <div class="flag-dropdown">
+                          <img src="assets/img/flag-us.png" alt="US Flag">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <input type="tel" id="phoneNumber" value="(454) 726-0592" placeholder="(XXX) XXX-XXXX">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <div class="input-container">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" value="LoisBecket@gmail.com" placeholder="example@email.com">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="companyName">Company Name</label>
+                      <div class="input-container">
+                        <i class="fas fa-building"></i>
+                        <input type="text" id="companyName" value="Ice Butcher" placeholder="Company Name">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="companyAddress">What's your company address</label>
+                      <div class="input-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="companyAddress" value="3439 SW 11th St, Deerfield Beach, FL 33442-8138, United States, USA" placeholder="Enter Address">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="country">Country</label>
+                      <div class="dropdown">
+                        <button class="dropdown-btn">
+                          United States <i class="fas fa-chevron-down"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="userId">User ID</label>
+                      <div class="input-container">
+                        <input type="text" id="userId" value="324563" readonly>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="agentText">Customize Agent text as</label>
+                      <div class="input-container">
+                        <input type="text" id="agentText" value="Agent" placeholder="Agent">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Display Image</label>
+                      <div class="display-option">
+                        <div class="option-item">
+                          <input type="radio" id="agentImage" name="displayImage" checked>
+                          <label for="agentImage">Agent's Image</label>
+                        </div>
+                        <div class="option-item">
+                          <input type="radio" id="companyLogo" name="displayImage">
+                          <label for="companyLogo">Company Logo</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="update-btn-container">
+                    <button class="update-btn">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Change Language Accordion -->
+            <div class="profile-accordion">
+              <div class="accordion-header">
+                <div class="accordion-icon">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <h3>Change Language</h3>
+              </div>
+              <div class="accordion-content" style="display: none;">
+                <!-- Language options would go here -->
+              </div>
+            </div>
+
+            <!-- Change Password Accordion -->
+            <div class="profile-accordion">
+              <div class="accordion-header">
+                <div class="accordion-icon">
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <h3>Change Password</h3>
+              </div>
+              <div class="accordion-content" style="display: none;">
+                <!-- Password change form would go here -->
+              </div>
+            </div>
+          </section>
           <!-- Access Control Section -->
-          <section id="access-control" class="settings-section active">
+          <section id="access-control" class="settings-section">
             <div class="section-header">
               <h2>Agent Access Control List</h2>
               <p>Add new roles with customized permissions as per your requirement. <a href="#">Learn more</a></p>

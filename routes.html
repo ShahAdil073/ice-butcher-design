@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Butcher - Routes</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/routes.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar Component -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/img/logo.png" alt="Ice Butcher Logo">
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+          <li>
+            <a href="agents.html">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+          <li>
+            <a href="customers.html">
+              <i class="fas fa-users"></i>
+            </a>
+          </li>
+          <li class="active">
+            <a href="routes.html">
+              <i class="fas fa-route"></i>
+            </a>
+          </li>
+          <li>
+            <a href="analytics.html">
+              <i class="fas fa-chart-simple"></i>
+            </a>
+          </li>
+          <li>
+            <a href="dashcam.html">
+              <i class="fas fa-video"></i>
+            </a>
+          </li>
+          <li>
+            <a href="settings.html">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Header Component -->
+      <header class="header">
+        <h1>Routes</h1>
+        <div class="header-actions">
+          <button class="refresh-btn">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+          <button class="user-profile">
+            <img src="assets/img/avatar.png" alt="User avatar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Routes Container -->
+      <div class="routes-container">
+        <div class="routes-description">
+          <h2>Routes</h2>
+          <p>Create optimized routes for a group of Task and assign Agent. (If the manager unassigns the route, it gets removed from the list)</p>
+        </div>
+
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search Routes from Route ID">
+        </div>
+
+        <div class="routes-table-container">
+          <table class="routes-table">
+            <thead>
+              <tr>
+                <th>Route ID</th>
+                <th>Agent Name</th>
+                <th>Team Name</th>
+                <th>Routed Tas</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>234535</td>
+                <td>Emma Bold</td>
+                <td>Default</td>
+                <td>Pickup</td>
+                <td><span class="status-badge idle">Idle</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>234535</td>
+                <td>Lucy Kunic</td>
+                <td>Default</td>
+                <td>Delivery</td>
+                <td><span class="status-badge in-transit">In Transit</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>234535</td>
+                <td>Emma Smith</td>
+                <td>Default</td>
+                <td>Pickup</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>234535</td>
+                <td>Neil Owen</td>
+                <td>Default</td>
+                <td>Delivery</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button class="prev-page">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="page-numbers">
+            <button class="page-number active">1</button>
+          </div>
+          <button class="next-page">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/routes.js"></script>
+</body>
+</html>

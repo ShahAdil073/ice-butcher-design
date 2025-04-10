@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ice Butcher - Agents</title>
+  <title>Ice Butcher - Customers</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/agents.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -23,12 +23,12 @@
               <i class="fas fa-th-large"></i>
             </a>
           </li>
-          <li class="active">
+          <li>
             <a href="agents.html">
               <i class="fas fa-user"></i>
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="customers.html">
               <i class="fas fa-users"></i>
             </a>
@@ -61,16 +61,9 @@
     <main class="main-content">
       <!-- Header Component -->
       <header class="header">
-        <h1>Agent</h1>
+        <h1>Customer</h1>
         <div class="header-actions">
           <div class="filter-section">
-            <div class="filter-dropdown">
-              <button class="filter-btn">
-                <i class="fas fa-users"></i>
-                All Teams
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
             <div class="filter-dropdown">
               <button class="filter-btn">
                 <i class="fas fa-tag"></i>
@@ -88,7 +81,7 @@
           </div>
           <button class="add-agent-btn">
             <i class="fas fa-plus"></i>
-            Add Agent
+            Add Customer
             <i class="fas fa-chevron-down"></i>
           </button>
           <button class="refresh-btn">
@@ -110,13 +103,13 @@
           <div class="search-options-right">
             <div class="filter-dropdown">
               <button class="filter-btn">
-                Fleet Id
+                Customer Id
                 <i class="fas fa-chevron-down"></i>
               </button>
             </div>
             <div class="filter-dropdown">
               <button class="filter-btn">
-                Exact Search
+                Filter Columns
                 <i class="fas fa-chevron-down"></i>
               </button>
             </div>
@@ -134,50 +127,12 @@
                 <th>Username</th>
                 <th>Email</th>
                 <th>Phone</th>
-                <th>Device Type</th>
-                <th>Version</th>
-                <th>Team</th>
                 <th>STATUS</th>
                 <th>ACTIONS</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><input type="checkbox" class="select-row"></td>
-                <td>13639</td>
-                <td><div class="agent-avatar accent-e">E</div></td>
-                <td>Emma Bold</td>
-                <td>Emma Bold</td>
-                <td>christianmhiggins26@gmail.com</td>
-                <td>+1 6175155065</td>
-                <td>iOS</td>
-                <td>4.8.4</td>
-                <td>Default</td>
-                <td><span class="status-badge offline">Offline</span></td>
-                <td>
-                  <button class="action-btn">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="select-row"></td>
-                <td>13640</td>
-                <td><div class="agent-avatar accent-l">L</div></td>
-                <td>Lucy Kunic</td>
-                <td>Lucy Kunic</td>
-                <td>alvaro@theicbutcher.com</td>
-                <td>+1 561-701-3029</td>
-                <td>Android</td>
-                <td>4.6.9</td>
-                <td>Default</td>
-                <td><span class="status-badge offline">Offline</span></td>
-                <td>
-                  <button class="action-btn">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                </td>
-              </tr>
+              
               <tr>
                 <td><input type="checkbox" class="select-row"></td>
                 <td>13641</td>
@@ -186,9 +141,6 @@
                 <td>Emma Smith</td>
                 <td>lmaristanya@gmail.com</td>
                 <td>+1 754-802-9952</td>
-                <td>iOS</td>
-                <td>4.8.5</td>
-                <td>Default</td>
                 <td><span class="status-badge offline">Offline</span></td>
                 <td>
                   <button class="action-btn">
@@ -204,63 +156,6 @@
                 <td>Neil Owen</td>
                 <td>berman.lukas@gmail.com</td>
                 <td>+1 9546217719</td>
-                <td>iOS</td>
-                <td>4.7.5</td>
-                <td>Default</td>
-                <td><span class="status-badge offline">Offline</span></td>
-                <td>
-                  <button class="action-btn">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="select-row"></td>
-                <td>13643</td>
-                <td><div class="agent-avatar"><img src="assets/img/avatar-2.png" alt="Ana Crown"></div></td>
-                <td>Ana Crown</td>
-                <td>Ana Crown</td>
-                <td>2narogers@gmail.com</td>
-                <td>+1 813-598-9455</td>
-                <td>iOS</td>
-                <td>4.9.1</td>
-                <td>Default</td>
-                <td><span class="status-badge offline">Offline</span></td>
-                <td>
-                  <button class="action-btn">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="select-row"></td>
-                <td>13644</td>
-                <td><div class="agent-avatar accent-c">C</div></td>
-                <td>Roger@theicebutcher.com</td>
-                <td>Mikaela Collins</td>
-                <td>roger@theicbutcher.com</td>
-                <td>+1 954-554-7994</td>
-                <td>iOS</td>
-                <td>4.8.9</td>
-                <td>Default</td>
-                <td><span class="status-badge in-transit">In Transit</span></td>
-                <td>
-                  <button class="action-btn">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" class="select-row"></td>
-                <td>13645</td>
-                <td><div class="agent-avatar accent-m">M</div></td>
-                <td>Melody Macy</td>
-                <td>Melody Macy</td>
-                <td>www.hugo mejia@gmail.com</td>
-                <td>+1 954-559-1711</td>
-                <td>iOS</td>
-                <td>4.9.4</td>
-                <td>Default</td>
                 <td><span class="status-badge offline">Offline</span></td>
                 <td>
                   <button class="action-btn">
@@ -276,10 +171,37 @@
                 <td>Emma Smith</td>
                 <td>josephdrayer son5@gmail.com</td>
                 <td>+1 954-552-9912</td>
-                <td>Android</td>
-                <td>4.9.4</td>
-                <td>Default</td>
                 <td><span class="status-badge idle">Idle</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13639</td>
+                <td><div class="agent-avatar accent-e">E</div></td>
+                <td>Emma Bold</td>
+                <td>Emma Bold</td>
+                <td>christianmhiggins26@gmail.com</td>
+                <td>+1 6175155065</td>
+                <td><span class="status-badge offline">Offline</span></td>
+                <td>
+                  <button class="action-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" class="select-row"></td>
+                <td>13640</td>
+                <td><div class="agent-avatar accent-l">L</div></td>
+                <td>Lucy Kunic</td>
+                <td>Lucy Kunic</td>
+                <td>alvaro@theicbutcher.com</td>
+                <td>+1 561-701-3029</td>
+                <td><span class="status-badge offline">Offline</span></td>
                 <td>
                   <button class="action-btn">
                     <i class="fas fa-ellipsis-v"></i>
@@ -294,9 +216,6 @@
                 <td>Ethan Wilder</td>
                 <td>jamjat 2nd@gmail.com</td>
                 <td>+16462393455</td>
-                <td>Android</td>
-                <td>4.8.4</td>
-                <td>Default</td>
                 <td><span class="status-badge idle">Idle</span></td>
                 <td>
                   <button class="action-btn">
@@ -312,9 +231,6 @@
                 <td>Lucy Kunic</td>
                 <td>0dthomas15 21@gmail.com</td>
                 <td>+1 954-515-6324</td>
-                <td>Android</td>
-                <td>4.9.4</td>
-                <td>Default</td>
                 <td><span class="status-badge idle">Idle</span></td>
                 <td>
                   <button class="action-btn">

@@ -1,0 +1,174 @@
+/* Routes Page Specific Styles */
+.routes-container {
+  padding: 20px;
+}
+
+.routes-description {
+  margin-bottom: 20px;
+}
+
+.routes-description h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.routes-description p {
+  color: #6B7280;
+  font-size: 14px;
+}
+
+.search-box {
+  position: relative;
+  max-width: 460px;
+  margin-bottom: 24px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6B7280;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: #9CA3AF;
+}
+
+.routes-table-container {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.routes-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.routes-table th,
+.routes-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.routes-table th {
+  font-weight: 600;
+  color: #4B5563;
+  font-size: 14px;
+}
+
+.routes-table td {
+  font-size: 14px;
+  color: #1F2937;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.idle {
+  background-color: #E5F7EE;
+  color: #0F9D58;
+}
+
+.status-badge.in-transit {
+  background-color: #E3F2FD;
+  color: #2196F3;
+}
+
+.status-badge.offline {
+  background-color: #FFE9EC;
+  color: #FF4560;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.action-btn:hover {
+  background-color: #F3F4F6;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  background: transparent;
+  border: 1px solid #E5E7EB;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin: 0 5px;
+  color: #4B5563;
+}
+
+.prev-page, .next-page {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.page-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.page-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  font-weight: 500;
+  background-color: #ffffff;
+}
+
+.page-number.active {
+  background-color: #0F3460;
+  color: white;
+  border-color: #0F3460;
+}
+
+@media (max-width: 768px) {
+  .routes-table th,
+  .routes-table td {
+    padding: 12px 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .routes-container {
+    padding: 15px;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+}
